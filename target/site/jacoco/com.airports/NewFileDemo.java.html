@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NewFileDemo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">testcases</a> &gt; <a href="index.source.html" class="el_package">com.airports</a> &gt; <span class="el_source">NewFileDemo.java</span></div><h1>NewFileDemo.java</h1><pre class="source lang-java linenums">package com.airports;
+
+import com.aiports.helpers.AirportType;
+
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+<span class="nc" id="L9">public class NewFileDemo {</span>
+    public static void main(String[] args) throws Exception {
+<span class="nc" id="L11">        long smallairports = Files.readString(Paths.get(&quot;C:\\airportsdata\\airports.csv&quot;))</span>
+<span class="nc" id="L12">                .lines()</span>
+<span class="nc" id="L13">                .filter(NewFileDemo::smallAirports)</span>
+<span class="nc" id="L14">                .count();</span>
+<span class="nc" id="L15">        long mediumairports = Files.readString(Paths.get(&quot;C:\\airportsdata\\airports.csv&quot;))</span>
+<span class="nc" id="L16">                .lines()</span>
+<span class="nc" id="L17">                .filter(NewFileDemo::mediumAirports)</span>
+<span class="nc" id="L18">                .count();</span>
+<span class="nc" id="L19">        long largeairports = Files.readString(Paths.get(&quot;C:\\airportsdata\\airports.csv&quot;))</span>
+<span class="nc" id="L20">                .lines()</span>
+<span class="nc" id="L21">                .filter(NewFileDemo::largeAirports)</span>
+<span class="nc" id="L22">                .count();</span>
+<span class="nc" id="L23">        long heliports = Files.readString(Paths.get(&quot;C:\\airportsdata\\airports.csv&quot;))</span>
+<span class="nc" id="L24">                .lines()</span>
+<span class="nc" id="L25">                .filter(NewFileDemo::heliports)</span>
+<span class="nc" id="L26">                .count();</span>
+<span class="nc" id="L27">        long closed = Files.readString(Paths.get(&quot;C:\\airportsdata\\airports.csv&quot;))</span>
+<span class="nc" id="L28">                .lines()</span>
+<span class="nc" id="L29">                .filter(NewFileDemo::closed)</span>
+<span class="nc" id="L30">                .count();</span>
+<span class="nc" id="L31">        long seaplanebases = Files.readString(Paths.get(&quot;C:\\airportsdata\\airports.csv&quot;))</span>
+<span class="nc" id="L32">                .lines()</span>
+<span class="nc" id="L33">                .filter(NewFileDemo::seaplaneBases)</span>
+<span class="nc" id="L34">                .count();</span>
+<span class="nc" id="L35">        System.out.println(smallairports);</span>
+<span class="nc" id="L36">        System.out.println(mediumairports);</span>
+<span class="nc" id="L37">        System.out.println(largeairports);</span>
+<span class="nc" id="L38">        System.out.println(heliports);</span>
+<span class="nc" id="L39">        System.out.println(closed);</span>
+<span class="nc" id="L40">        System.out.println(seaplanebases);</span>
+<span class="nc" id="L41">    }</span>
+
+    public static boolean smallAirports(String airport) {
+<span class="nc" id="L44">        return airport.contains(AirportType.small_airport.name());</span>
+    }
+
+    public static boolean largeAirports(String airport) {
+<span class="nc" id="L48">        return airport.contains(AirportType.large_airport.name());</span>
+    }
+
+    public static boolean heliports(String airport) {
+<span class="nc" id="L52">        return airport.contains(AirportType.heliport.name());</span>
+    }
+
+    public static boolean closed(String airport) {
+<span class="nc" id="L56">        return airport.contains(AirportType.closed.name());</span>
+    }
+
+    public static boolean seaplaneBases(String airport) {
+<span class="nc" id="L60">        return airport.contains(AirportType.seaplane_base.name());</span>
+    }
+
+    public static boolean mediumAirports(String airport) {
+<span class="nc" id="L64">        return airport.contains(AirportType.seaplane_base.name());</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

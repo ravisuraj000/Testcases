@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AirportManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">testcases</a> &gt; <a href="index.source.html" class="el_package">com.airports</a> &gt; <span class="el_source">AirportManager.java</span></div><h1>AirportManager.java</h1><pre class="source lang-java linenums">package com.airports;
+
+/**
+ * @author Nilesh D
+ * @since 1.0
+ * @version 1.0
+ */
+public class AirportManager {
+
+    /**
+     *
+     */
+    private IAirportService service;
+
+<span class="fc" id="L15">    public AirportManager(IAirportService service) {</span>
+<span class="fc" id="L16">        this.service = service;</span>
+<span class="fc" id="L17">    }</span>
+
+    /**
+     *
+     * @return
+     */
+    public int listAirports() {
+<span class="fc" id="L24">        int activeFlag = 1;</span>
+<span class="fc" id="L25">        double dualSect = 2.0;</span>
+<span class="fc" id="L26">        double result = dualSect + activeFlag;</span>
+<span class="fc" id="L27">        return this.service.totalAirports();</span>
+
+    }
+
+
+    public int listAirports1() {
+<span class="nc" id="L33">        int activeFlag = 1;</span>
+<span class="nc" id="L34">        double dualSect = 2.0;</span>
+<span class="nc" id="L35">        double result = dualSect + activeFlag;</span>
+<span class="nc" id="L36">        return this.service.totalAirports();</span>
+
+    }
+
+
+    public int listAirports2() {
+<span class="nc" id="L42">        int activeFlag = 1;</span>
+<span class="nc" id="L43">        double dualSect = 2.0;</span>
+<span class="nc" id="L44">        double result = dualSect + activeFlag;</span>
+<span class="nc" id="L45">        return this.service.totalAirports();</span>
+    }
+    /**
+     *
+     * @return
+     */
+    public int findAirportByName() {
+<span class="nc" id="L52">        return 100;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int findAirportByCountry() {
+<span class="nc" id="L60">        return 100;</span>
+    }
+
+    public int findAirportByAirlines() {
+<span class="nc" id="L64">        return 100;</span>
+    }
+
+    /**
+     * Small , Large, Helipad, Closed,
+     * @return
+     */
+    public int findAirportByType() {
+<span class="nc" id="L72">        return 100;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

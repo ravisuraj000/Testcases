@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+testcases,com.aiports.helpers,AirportType,74,0,0,0,8,0,1,0,1,0
+testcases,com.aiports.helpers,PropertyHelper,33,0,2,0,13,0,4,0,3,0
+testcases,com.airports,StreamsDemo,81,0,2,0,15,0,6,0,5,0
+testcases,com.airports,AirportsDataDownloader,126,0,2,0,32,0,9,0,8,0
+testcases,com.airports,AirportManager,34,19,0,0,12,7,6,2,6,2
+testcases,com.airports,NewFileDemo,112,0,0,0,38,0,8,0,8,0
